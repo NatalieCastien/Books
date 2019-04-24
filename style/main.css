@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  padding: 20px;
+  border-top: solid 50px #03553e;
+  font-family: sans-serif; }
+
+table.book-overview {
+  border-collapse: collapse;
+  border-spacing: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  table.book-overview tr th {
+    border-bottom: 1px solid #03553e; }
+
+.book-details p.align-right {
+  text-align: right; }
+
+/*# sourceMappingURL=main.css.map */

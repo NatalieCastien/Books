@@ -1,0 +1,29 @@
+@import "colors";
+
+body {
+  margin: 0;
+  padding: 20px;
+  border-top: solid 50px $main_color;
+  font-family: sans-serif;
+}
+
+table.book-overview {
+  border-collapse: collapse;
+  border-spacing: 5px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+  tr {
+    th {
+      border-bottom: 1px solid $main_color;
+    }
+  }
+}
+
+.book-details {
+  p {
+    &.align-right {
+      text-align: right;
+    }
+  }
+}

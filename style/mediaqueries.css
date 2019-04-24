@@ -1,0 +1,28 @@
+@media(max-width: 500px) {
+    .book-overview tr th:nth-child(3), td:nth-child(3) {
+        display: none;
+    }
+
+    .book-overview tr th:nth-child(4), td:nth-child(4) {
+        display: none;
+    }
+
+    .book-details {
+        flex-direction: column;
+    }
+
+    /*werk nog niet*/
+    book-details {
+        padding-bottom: 0;
+    }
+
+    .book-details .book-detail-img img {
+        width: 50%;
+    }
+
+    .book-details .book-detail {
+        margin-top: 20px;
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
