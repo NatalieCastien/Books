@@ -1,5 +1,5 @@
 html {
-  font-size: 10pt; }
+  font-size: 11pt; }
 
 /*.book-overview thead th.book-overview-important {
     color: red;
@@ -12,7 +12,6 @@ body {
 
 h1 {
   color: #03553e;
-  font-size: 2.5rem;
   margin-block-end: 0; }
 
 footer {
@@ -41,14 +40,14 @@ label {
 .book-overview th {
   text-align: left; }
 
-.book-details {
-  display: flex;
-  max-width: 900px; }
-
 .book-overview th, td {
   padding: 5px; }
 
 /*book-details pagina*/
+.book-details {
+  display: flex;
+  max-width: 900px; }
+
 .book-details .book-detail {
   flex-basis: 230px;
   padding-right: 20px;
@@ -84,11 +83,7 @@ button {
 .book-details .add-button {
   align-content: flex-end;
   /*werkt niet*/
-  background-color: #227e3e;
+  background-color: #03553e;
   color: white; }
-
-.back-button {
-  text-decoration: none;
-  color: black; }
 
 /*# sourceMappingURL=layout.css.map */

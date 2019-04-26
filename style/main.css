@@ -1,8 +1,21 @@
+html {
+  font-size: 11pt; }
+
 body {
   margin: 0;
   padding: 20px;
   border-top: solid 50px #03553e;
   font-family: sans-serif; }
+
+h1 {
+  color: #03553e;
+  margin-block-end: 0; }
+
+footer {
+  font-size: 0.75rem;
+  color: #565656;
+  padding-top: 10px;
+  border-top: solid 1px black; }
 
 table.book-overview {
   border-collapse: collapse;

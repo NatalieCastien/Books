@@ -2,49 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Books</title>
     <link rel="stylesheet" href="style/layout.css"/>
     <link rel="stylesheet" href="style/mediaqueries.css"/>
-
+    <link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
-<body>
-<h1>Books</h1>
-<p>Hi! Below you will find an overview of my favorite books.</p>
 
-<table class="book-overview">
-    <thead>
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>ISBN</th>
-        <th>Price</th>
-    </tr>
+<body>
+<h1 class="font-weight-bold mt-4">Books</h1>
+<p>Hi! Below you will find an overview of the available books.</p>
+
+<table class="table book-overview">
+    <thead class="table-borderless border-bottom">
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Author</th>
+            <th scope="col">ISBN</th>
+            <th scope="col">Price</th>
+        </tr>
     </thead>
-    <tbody>
-    <tr>
-        <td><a href="book.html">Clean Code</a></td>
-        <td>Robert C. Martin</td>
-        <td>999</td>
-        <td>&euro; 35,95</td>
-    </tr>
-    <tr>
-        <td><a href="book2.html">Learning PHP Design Patterns</a></td>
-        <td>William Sanders</td>
-        <td>888</td>
-        <td>&euro; 29,99</td>
-    </tr>
-    <tr>
-        <td><a href="book3.html">Don't make me think</a></td>
-        <td>Steve Krug</td>
-        <td>777</td>
-        <td>&euro; 43,99</td>
-    </tr>
+    <tbody class="table-borderless">
+        <tr>
+            <td><a href="book.html">Clean Code</a></td>
+            <td>Robert C. Martin</td>
+            <td>999</td>
+            <td>&euro; 35,95</td>
+        </tr>
+        <tr>
+            <td><a href="book2.html">Learning PHP Design Patterns</a></td>
+            <td>William Sanders</td>
+            <td>888</td>
+            <td>&euro; 29,99</td>
+        </tr>
+        <tr>
+            <td><a href="book3.html">Don't make me think</a></td>
+            <td>Steve Krug</td>
+            <td>777</td>
+            <td>&euro; 43,99</td>
+        </tr>
     </tbody>
 
 </table>
 
 <footer>
-    &copy;2018 Copyright The Bookstore
+    &copy;2019 Copyright The Bookstore
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
