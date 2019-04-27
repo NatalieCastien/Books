@@ -2,7 +2,6 @@ html {
   font-size: 11pt; }
 
 body {
-  margin: 0;
   padding: 20px;
   border-top: solid 50px #03553e;
   font-family: sans-serif; }
@@ -17,15 +16,41 @@ footer {
   padding-top: 10px;
   border-top: solid 1px black; }
 
+label {
+  font-weight: bold; }
+
+/*book overview*/
 table.book-overview {
   border-collapse: collapse;
   border-spacing: 5px;
   margin-top: 50px;
   margin-bottom: 50px; }
-  table.book-overview tr th {
-    border-bottom: 1px solid #03553e; }
+table th {
+  padding: 5px; }
+table td {
+  padding: 5px; }
+table tr th {
+  border-bottom: 1px solid black; }
 
+.subtitle {
+  font-size: 150%;
+  font-weight: bold;
+  color: #747474;
+  margin-block-start: 0; }
+
+/*book-details*/
+.book-details .book-detail {
+  flex-basis: 230px;
+  padding-right: 20px;
+  padding-left: 20px; }
+.book-details .book-detail-img img {
+  width: 100%; }
 .book-details p.align-right {
   text-align: right; }
+.book-details .book-detail-description {
+  flex-grow: 1; }
+.book-details .add-button {
+  background-color: #03553e;
+  color: white; }
 
 /*# sourceMappingURL=main.css.map */

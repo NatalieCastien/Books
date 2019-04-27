@@ -5,13 +5,12 @@ html {
 }
 
 body {
-  margin: 0;
   padding: 20px;
   border-top: solid 50px $main_color;
   font-family: sans-serif;
 }
 h1 {
-  color:#03553e;
+  color:$main_color;
   margin-block-end:0;
 }
 footer {
@@ -21,23 +20,65 @@ footer {
   border-top: solid 1px black;
 }
 
-table.book-overview {
-  border-collapse: collapse;
-  border-spacing: 5px;
-  margin-top: 50px;
-  margin-bottom: 50px;
+label {
+  font-weight: bold;
+}
 
+/*book overview*/
+
+table{
+  &.book-overview {
+    border-collapse: collapse;
+    border-spacing: 5px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  th {
+    padding: 5px;
+  }
+  td {
+    padding: 5px;
+  }
   tr {
     th {
-      border-bottom: 1px solid $main_color;
+      border-bottom: 1px solid black;
     }
   }
 }
 
+.subtitle {
+  font-size: 150%;
+  font-weight: bold;
+  color: #747474;
+  margin-block-start: 0;
+}
+
+/*book-details*/
 .book-details {
+  .book-detail {
+    flex-basis: 230px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .book-detail-img {
+    img {
+      width: 100%;
+    }
+  }
+
   p {
     &.align-right {
       text-align: right;
     }
+  }
+
+  .book-detail-description {
+    flex-grow: 1;
+  }
+
+  .add-button {
+    background-color: $main_color;
+    color: white;
   }
 }

@@ -2,50 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Learning PHP Design Patterns</title>
-    <link rel="stylesheet" href="style/layout.css"/>
+    <link rel="stylesheet" href="style/main.css"/>
     <link rel="stylesheet" href="style/mediaqueries.css"/>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
 
 <body>
-<h1>Learning PHP Design Patterns</h1>
-<p class="subtitle"></p>
+    <h1 class="font-weight-bold">Learning PHP Design Patterns</h1>
+    <p class="subtitle"></p>
 
-<div class="book-details">
-    <div class="book-detail-img">
-        <img src="images/book-learning-php-design-patterns.jpg"/>
-    </div>
-    <div class="book-detail">
-        <label>ISBN</label>
-        <p>9781449344917</p>
-        <label>Author</label>
-        <p>William Sanders</p>
-        <label>Publisher</label>
-        <p>O\'Reilly Media</p>
-        <label class="pages">Pages</label>
-        <p class="pages">350</p>
-        <label class="price">Price</label>
-        <p class="price">&euro; 29,99</p>
-    </div>
-    <column>
-        <row>
-            <div class="book-detail-description">
+    <section class="container ml-0 px-0 book-details">
+        <div class="row">
+            <div class="col-6 book-detail book-detail-img">
+                <img src="images/book-learning-php-design-patterns.jpg"/>
+            </div>
+
+            <div class="col-md-4 book-detail">
+                <label class="mb-0">ISBN</label>
+                <p>9781449344917</p>
+
+                <label class="mb-0">Author</label>
+                <p>William Sanders</p>
+
+                <label class="mb-0">Publisher</label>
+                <p>O\'Reilly Media</p>
+
+                <label class="mb-0 pages">Pages</label>
+                <p class="pages">350</p>
+
+                <label class="mb-0 price">Price</label>
+                <p class="price">&euro; 29,99</p>
+            </div>
+
+            <div class="col-auto book-detail book-detail-description">
                 <p>Build server-side applications more efficiently and improve your PHP programming skills in the process by learning how to use design patterns in your code. This book shows you how to apply several object-oriented patterns through simple examples, and demonstrates many of them in full-fledged working applications.</p>
+                <p class="text-right"><button class="btn add-button p-2">Add to cart</button></p>
             </div>
-        </row>
-        <row>
-            <div>
-                <button class="add-button">Add to card</button>
-            </div>
-        </row>
-    </column>
-</div>
+        </div>
+    </section>
 
-<button><a class="back-button" type="button" href="index.html">Back</a></button>
-<!--werkt nog niet*-->
+    <a class="ml-1 my-4 btn" type="button" href="index.html">Back</a>
 
-<footer>
-    &copy;2018 Copyright The Bookstore
-</footer>
+    <footer>
+        &copy;2019 Copyright The Bookstore
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </body>
 </html>
