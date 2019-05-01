@@ -1,0 +1,24 @@
+@import "colors";
+
+html {
+  font-size: 11pt;
+}
+
+body {
+  padding: 20px;
+  border-top: solid 50px $main_color;
+  font-family: sans-serif;
+}
+h1 {
+  color:$main_color;
+  margin-block-end:0;
+}
+footer {
+  font-size: 0.75rem;
+  color: $footer_color;
+  padding-top: 10px;
+  border-top: solid 1px black;
+}
+.preserve-white-space {
+  white-space:pre-line;
+}
