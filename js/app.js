@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded',function () {
 
 
 
-
+// Bereken prompts
     function berekenUitkomst() {
         var getal1 = prompt('Eerste getal');
         var getal2 = prompt('tweede getal');
@@ -25,21 +25,37 @@ document.addEventListener('DOMContentLoaded',function () {
     document.getElementById('rekenUitkomst').textContent = result;
 
 
+// Rekenmachine
+
+    document.getElementById('calc').addEventListener('click', function() {
+        function calculate() {
+            var getal1 = parseInt(document.getElementById('getal1').value);
+            var getal2 = parseInt(document.getElementById('getal2').value);
+            var operator = document.getElementById('operator').value;
+
+            if(operator === '+'){
+                var calculation = getal1 + getal2;
+            }
+            if(operator === '-'){
+                var calculation = getal1 - getal2;
+            }
+            if(operator === ':'){
+                var calculation = getal1 / getal2;
+            }
+            if(operator === 'x'){
+                var calculation = getal1 * getal2;
+            }
+            // var calculation = getal1 + getal2;
+            return calculation;
+        }
+
+        var calculation = calculate();
+        document.getElementById('result').value = calculation;
+    });
 
 });
 
-document.getElementById('calc').addEventListener("click", function() {
-    function calculate() {
-        var getal1 = document.getElementById(getal1);
-        var getal2 = document.getElementById(getal2);
 
-        var result = parseInt(getal1) + parseInt(getal2);
-        return result;
-    }
-
-    var result = calculate();
-    document.getElementById('result').textContent = result;
-});
 
 
 
