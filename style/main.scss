@@ -3,3 +3,17 @@
 @import "colors";
 @import "book-details";
 
+input:required {
+  border: solid 1px grey;
+}
+
+input:valid {
+  border: solid 1px green;
+}
+input:invalid {
+  border: solid 1px red;
+}
+li.active {
+  color: red;
+  border: solid 1px blue;
+}

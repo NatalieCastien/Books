@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Clean Code</title>
 <!--    <link rel="stylesheet" href="style/bootstrap.min.css">-->
-    <link rel="stylesheet" href="style/main.css"/>
-    <script src="js/app.js"></script>
+    <link rel="stylesheet" href="../style/main.css"/>
+
 
 </head>
 
@@ -29,23 +29,30 @@
     <h3>Real calculator</h3>
     <label>Rekenmachine:</label><br />
     <div id="rekenmachine"></div>
-        <form>
-            <input type="text" id="getal1">
-            <select id="operator">
-                <option name="plus" value="+">+</option>
-                <option name="minus" value="-">-</option>
-                <option name="divide" value=":">:</option>
-                <option name="multiply" value="x">x</option>
-            </select>
-            <input type="text" id="getal2">
+    <form>
+<!--        input type number zorgt ervoor dat je geen letters kunt invoeren-->
+        <input type="number" id="getal1" required min="2" max="5">
+        <select id="operator">
+            <option name="plus" value="+">+</option>
+            <option name="minus" value="-">-</option>
+            <option name="divide" value=":">:</option>
+            <option name="multiply" value="x">x</option>
+        </select>
+        <input type="number" id="getal2">
 
-        </form>
+    </form>
     <button id="calc" value="=">=</button>
-        <p>The result is: <br/>
-            <input type="value" id="result">
-        </p>
+    <p>The fieldresult is: <br/>
+        <input type="text" id="resultfield">
+    </p>
+    <p>The textresult is: <br/>
+        <span id="resulttext"></span>
+    </p>
 
+    <h3>Cats</h3>
+    <ul class="cats">
 
+    </ul>
 
 
     <footer>
@@ -53,6 +60,8 @@
     </footer>
 
 </div>
+    <script src="../js/model/calculator.js"></script>
+    <script src="../js/app.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
