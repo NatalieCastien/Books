@@ -38,80 +38,10 @@ const books = [
         image: 'book-dont-make-me-think.jpg',
     }];
 
-const listBooksDetail = (books) => {
-    const createBookListItemDetail = (book) => {
-        const parent = document.querySelector("div.title")
-        const h1 = document.createElement('h1');
-
-        h1.textContent = book.title;
-        h1.className = 'font-weight-bold';
-
-        parent.appendChild(h1);
-
-        return parent;
-    };
-
-    books.forEach(function(book) {
-        const bookListItemDetail = createBookListItemDetail(book);
-
-        // parent.appendChild(bookListItemDetail);
-    });
+const getBooks = () => {
+    return books
 };
 
-listBooksDetail(books);
-books.forEach(function(book) {
-    // console.log(book.author);
-});
-
-
-
-
-const listBooksSubtitle = (books) => {
-    const createBookListItemSubtitle = (book) => {
-        const parent = document.querySelector('div.subtitles');
-        const p = document.createElement('p');
-
-        p.textContent = book.subtitle;
-        p.className = 'subtitle';
-
-        parent.appendChild(p);
-
-        return parent;
-    };
-
-    books.forEach(function(book) {
-        const bookListItemSubtitle = createBookListItemSubtitle(book);
-
-        parent.appendChild(bookListItemSubtitle);
-    });
+const getBookByIndex = (index) => {
+    return books[index];
 };
-
-listBooksSubtitle(books);
-books.forEach(function(book) {
-    // console.log(book.author);
-});
-
-const listBooksIsbn = (books) => {
-    const createBookListItemSubtitle = (book) => {
-        const parent = document.querySelector('tr.isbn');
-        const td = document.createElement('td');
-
-        td.textContent = book.isbn;
-        td.className = 'isbn';
-
-        parent.appendChild(td);
-
-        return parent;
-    };
-
-    books.forEach(function(book) {
-        const bookListItemSubtitle = createBookListItemIsbn(book);
-
-        parent.appendChild(bookListItemIsbn);
-    });
-};
-
-listBooksIsbn(books);
-books.forEach(function(book) {
-    // console.log(book.author);
-});
