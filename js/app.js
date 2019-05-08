@@ -72,8 +72,6 @@ document.addEventListener('DOMContentLoaded',function () {
     //Index pagina book list
     const fillBookTable = (tableElement, books) => {
         const createBookTableRow = (book) => {
-            const bookTableRow = document.createElement('tr');
-
             const createRowColumn = (text, className) => {
                 const rowColumn = document.createElement('td');
                 rowColumn.textContent = text;
@@ -84,17 +82,12 @@ document.addEventListener('DOMContentLoaded',function () {
                 return rowColumn;
             };
 
-            const titleColumn = createRowColumn(book.title);
-            const authorColumn = createRowColumn(book.author);
-            const isbnColumn = createRowColumn(book.isbn, 'd-none d-sm-table-cell');
-            const priceColumn = createRowColumn(book.price, 'd-none d-sm-table-cell');
+            const bookTableRow = document.createElement('tr');
 
-
-            bookTableRow.appendChild(titleColumn);
-            bookTableRow.appendChild(authorColumn);
-            bookTableRow.appendChild(isbnColumn);
-            bookTableRow.appendChild(priceColumn);
-
+            bookTableRow.appendChild(createRowColumn(book.title));
+            bookTableRow.appendChild(createRowColumn(book.author));
+            bookTableRow.appendChild(createRowColumn(book.isbn, 'd-none d-sm-table-cell'));
+            bookTableRow.appendChild(createRowColumn(book.price, 'd-none d-sm-table-cell'));
 
             return bookTableRow;
         };
@@ -116,7 +109,7 @@ document.addEventListener('DOMContentLoaded',function () {
     fillBookTable(tableElement, books);
 
     
-    
+
     // books.forEach(function(book) {
     //     // console.log(book.author);
     // });
