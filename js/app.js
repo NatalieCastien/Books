@@ -70,47 +70,56 @@ document.addEventListener('DOMContentLoaded',function () {
 
 
     //Index pagina book list
-    const listBooks = (books) => {
-        const createBookListItem = (book) => {
-            const bookListRow = document.createElement('tr');
+    const fillBookTable = (tableElement, books) => {
+        const createBookTableRow = (book) => {
+            const bookTableRow = document.createElement('tr');
 
-            const bookListTitle = document.createElement('td');
-            bookListTitle.textContent = book.title;
+            const createRowColumn = (text, className) => {
+                const rowColumn = document.createElement('td');
+                rowColumn.textContent = text;
+                if (className) {
+                    rowColumn.className = className;
+                }
+
+                return rowColumn;
+            };
+
+            const titleColumn = createRowColumn(book.title);
+            const authorColumn = createRowColumn(book.author);
+            const isbnColumn = createRowColumn(book.isbn, 'd-none d-sm-table-cell');
+            const priceColumn = createRowColumn(book.price, 'd-none d-sm-table-cell');
 
 
-            const bookListAuthor = document.createElement('td');
-            bookListAuthor.textContent = book.author;
+            bookTableRow.appendChild(titleColumn);
+            bookTableRow.appendChild(authorColumn);
+            bookTableRow.appendChild(isbnColumn);
+            bookTableRow.appendChild(priceColumn);
 
 
-            const bookListIsbn = document.createElement('td');
-            bookListIsbn.textContent = book.isbn;
-            bookListIsbn.className = 'd-none d-sm-table-cell';
-
-            const bookListPrice = document.createElement('td');
-            bookListPrice.textContent = book.price;
-            bookListPrice.className = 'd-none d-sm-table-cell';
-
-            bookListRow.appendChild(bookListTitle);
-            bookListRow.appendChild(bookListAuthor);
-            bookListRow.appendChild(bookListIsbn);
-            bookListRow.appendChild(bookListPrice);
-
-            return bookListRow;
+            return bookTableRow;
         };
 
-        const booksList = document.querySelector('tbody.books');
 
+
+        //for each zorgt ervoor dat de functie die erna beschreven wordt, wordt uitgevoegd voor elk item in die lijst
         books.forEach(function(book) {
-            const bookListItem = createBookListItem(book);
+            const bookTableRow = createBookTableRow(book);
 
-            booksList.appendChild(bookListItem);
+            tableElement.appendChild(bookTableRow);
         });
     };
 
-    listBooks(books);
-    books.forEach(function(book) {
-        // console.log(book.author);
-    });
+    const tableElement = document.querySelector('table.book-index');
+
+    //Hier roep je de functie aan.
+    // in de parameters geven we mee 1: welk element wil je vullen en 2 welke inhoud.
+    fillBookTable(tableElement, books);
+
+    
+    
+    // books.forEach(function(book) {
+    //     // console.log(book.author);
+    // });
 
     // console.log(cats);
 
