@@ -8,8 +8,10 @@ const fillBookTable = (tableElement, books) => {
 
 const createBookTableRow = (book) => {
     const bookTableRow = document.createElement('tr');
+    const bookLink = `book.html?id=${book.id}`;
+    // const bookLink = 'book.html?id=' + book.id;
 
-    bookTableRow.appendChild(createRowColumn(book.title));
+    bookTableRow.appendChild(createRowColumn(book.title, '', bookLink));
     bookTableRow.appendChild(createRowColumn(book.author));
     bookTableRow.appendChild(createRowColumn(book.isbn, 'd-none d-sm-table-cell'));
     bookTableRow.appendChild(createRowColumn(book.price, 'd-none d-sm-table-cell'));
@@ -17,11 +19,21 @@ const createBookTableRow = (book) => {
     return bookTableRow;
 };
 
-const createRowColumn = (text, className) => {
+const createRowColumn = (text, className, link) => {
     const rowColumn = document.createElement('td');
-    rowColumn.textContent = text;
+
     if (className) {
         rowColumn.className = className;
+    }
+
+    if (link) {
+        const linkElement = document.createElement('a');
+        linkElement.textContent = text;
+        linkElement.setAttribute('href', link);
+        rowColumn.appendChild(linkElement);
+    }
+    else {
+        rowColumn.textContent = text;
     }
 
     return rowColumn;
