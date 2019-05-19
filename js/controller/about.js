@@ -1,22 +1,20 @@
 document.addEventListener('DOMContentLoaded',function () {
-    const aboutElement = document.querySelector('h2');
-    const profile = getGitHubProfile();
+    const aboutElement = document.querySelector('div.about');
+    // const profile = getGitHubProfile();
+    // fillAboutInfo(aboutElement, getProfile());
 
-
-    // getGitHubProfile()
-    //     .done((data, text) => {
-    //         console.log(data);
-    //     })
-    //     .fail((request, status, error) => {
-    //         console.log(request, status, error);
-    //     });
-
-    fillAboutInfo(aboutElement, profile);
-
-
+    getGitHubProfile()
+        .done(function getProfile(profile) {
+           // alert(profile.id);
+            aboutElement.querySelector('h4').textContent = profile.login;
+            aboutElement.querySelector('p.id').textContent = profile.id;
+            aboutElement.querySelector('p.avatar').textContent = profile.avatar_url;
+            aboutElement.querySelector('p.url').textContent = profile.repos_url;
+            // console.log("hier gaat het nog steeds goed");
+        })
+        .fail((request, status, error) => {
+            console.log(request, status, error);
+        });
 });
 
-
-
-//Laat een aantal info elementjes van mijn github profiel zien op de pagina via jquery functies. Zoals avatar_url, html_url, repos_urls datum evt
 
