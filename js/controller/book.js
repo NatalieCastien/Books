@@ -1,11 +1,28 @@
 document.addEventListener('DOMContentLoaded',function () {
-    const overviewElement = document.querySelector('.book-overview');
-    const bookId = getQueryParameter('id');
-    const book = getBookById(bookId);
-    // const book = getBookByIndex(1);
+    updateCartAmount(getCartAmount());
 
-    document.title = book.title;
+    const bookId = getQueryParameter('id');
+
+    document.querySelector('.cart').addEventListener('click', function() {
+        addBookToCart(bookId);
+        updateCartAmount(getCartAmount());
+    });
+
+    const overviewElement = document.querySelector('.book-overview');
+
+    // getApiBook(bookId)
+    //     .done((book, text) => {
+    //         document.title = book.title;
+    //         fillBookOverview(overviewElement, book);
+    //         console.log(book);
+    //     })
+    //     .fail((request, status, error) => {
+    //         console.log(request, status, error);
+    //     });
+
+    const book = getBookById(bookId);
     fillBookOverview(overviewElement, book);
+    // const book = getBookByIndex(1);
 
 });
 
